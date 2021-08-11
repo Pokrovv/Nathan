@@ -6,5 +6,5 @@
 
 # How to use 🙄
 
-- It's easy, you just have to configure the config file located in ``configs\general.json`` as you wish.
+- It's easy, you just have to configure the config file located in ``config.toml`` as you wish.
 - If you have any further questions, you can contact skilouxe # 0666 on Discord or contact me directly on Twitter! [here](https://twitter.com/skilouxew3b)

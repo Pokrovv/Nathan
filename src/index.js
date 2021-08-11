@@ -13,8 +13,8 @@ client.on("ready", () => {
     const spinner = ora('Loading smile 😏').start();
     // setup the loader 
     setTimeout(() => {
-        spinner.color = 'yellow'; // Values: 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' | 'gray'
-        spinner.text = 'Loading ego of Skilouxe 😔'
+        spinner.color = 'green'; // Values: 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' | 'gray'
+        spinner.text = '😎 Nathan are running babe'
     }, 1000);
 });
 
