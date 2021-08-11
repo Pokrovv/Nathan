@@ -1,12 +1,12 @@
-import Discord from "discord.js";
+import {Client, Intents} from "discord.js";
 import ora from "ora";
 import { parse as tomlParse } from "@iarna/toml";
 import { readFileSync } from "fs";
 import {config as dotenv} from "dotenv";
 import {dirname, join} from "path";
 
-const config = tomlParse(readFileSync(join(dirname(new URL(import.meta.url).pathname), "..", "config.toml"), { encoding: "utf-8" }));
-const client = new Discord.Client();
+const config = tomlParse(readFileSync(new URL('../config.toml', import.meta.url)), { encoding: "utf-8" });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 dotenv();
 
 client.on("ready", () => {

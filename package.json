@@ -1,0 +1,43 @@
+{
+  "name": "nathan",
+  "version": "1.0.0",
+  "description": "Nathan is a discord bot management utility for Discord servers, created to manage the \"StreamBox\" server",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OhSkilouxe/Nathan.git"
+  },
+  "keywords": [
+    "discord",
+    "discord",
+    "bot",
+    "skilouxe",
+    "discord.js",
+    "bot",
+    "discord",
+    "v12",
+    "discord",
+    "bot",
+    "discordjs12",
+    "djs12",
+    "discord"
+  ],
+  "author": "Skilouxe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OhSkilouxe/Nathan/issues"
+  },
+  "homepage": "https://github.com/OhSkilouxe/Nathan#readme",
+  "dependencies": {
+    "@iarna/toml": "^2.2.5",
+    "discord.js": "^13.0.1",
+    "dotenv": "^10.0.0",
+    "fs": "0.0.1-security",
+    "node": "16.6.1",
+    "ora": "^5.4.1"
+  }
+}
