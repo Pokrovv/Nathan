@@ -1,5 +1,7 @@
 import {Client, Intents} from "discord.js";
 import ora from "ora";
+import figlet from "figlet";
+import chalk from "chalk";
 import { parse as tomlParse } from "@iarna/toml";
 import { readFileSync } from "fs";
 import {config as dotenv} from "dotenv";
@@ -10,12 +12,27 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 dotenv();
 
 client.on("ready", () => {
-    const spinner = ora('Loading smile 😏').start();
-    // setup the loader 
-    setTimeout(() => {
-        spinner.color = 'green'; // Values: 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' | 'gray'
-        spinner.text = '😎 Nathan are running babe'
-    }, 1000);
+    const spinner = ora({
+        text: 'Nathan are running babe',
+        spinner: {
+          frames: ['😎', '😪', '😡', '🥰'],
+          interval: 300,
+        },
+      }).start();
+    
+      setTimeout(() => {
+        spinner.stop();
+        figlet(`Nathan ${config.version} \n ---------`, function(err, data) {
+            if(err) {
+                console.log('Something went wrong on initialisation...');
+                console.dir(err);
+                return;
+            }
+        console.log(data);
+        console.log(chalk.green("Nathan, by skilouxe#0666 && created for StreamBox Discord server."));
+        console.log(chalk.green(`Who i'm: ${config.version} are my current version, i'm running on ${client.guilds.cache.size} servers.`));
+    });
+      }, 750 * 10);
 });
 
 
